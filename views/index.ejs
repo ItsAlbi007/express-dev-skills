@@ -5,14 +5,20 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Burbon</h1>
-    <p>Welcome To The Best <%= title.toLowerCase() %></p>
+    <p>Welcome to the best <%= title.toLowerCase() %></p>
     <ul>
-      <% alcohols.forEach(function(alcohol) { %>
+      <% alcohols.forEach(function(alcohols) { %>
         <li>
+          <form action="/alcohols/<%= alcohols.id %>?_method=DELETE"
+              method="POST"
+              class="df"
+          >
+            <button type="submit">X</button>
+          </form>
           <a href="/alcohols/<%= alcohols.id %>"><%= alcohols.name %></a>
         </li>
-      <% }) %>
+        <% }) %>
     </ul>
+    <a href="/alcohols/new">New Alcohol</a><br>
   </body>
 </html>
