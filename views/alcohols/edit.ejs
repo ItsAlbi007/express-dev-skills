@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <form action="/alcohols/<%= alcohol.id %>?_method=PUT" method="POST">
+    <input type="text" name="name" value="<%= alcohol.name %>">
+    <button type="submit">Update alcohol</button>
+    </form>
+</body>
+</html>

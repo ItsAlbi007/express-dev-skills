@@ -8,9 +8,9 @@
     <h1>Burbon</h1>
     <p>Welcome To The Best <%= title.toLowerCase() %></p>
     <ul>
-      <% alcohol.forEach(function(alcohol) { %>
+      <% alcohols.forEach(function(alcohol) { %>
         <li>
-          <a href="/alcohol/<%= alcohol.id %>"><%= alcohol.make %></a>
+          <a href="/alcohols/<%= alcohols.id %>"><%= alcohols.name %></a>
         </li>
       <% }) %>
     </ul>
